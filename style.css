@@ -1,0 +1,447 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: #000;
+    color: #fff;
+    min-height: 100vh;
+}
+
+/* Utility Classes */
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.btn {
+    padding: 0.75rem 2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.btn-primary {
+    background-color: #fff;
+    color: #000;
+}
+
+.btn-primary:hover {
+    background-color: #e5e5e5;
+    transform: scale(1.05);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+.btn-secondary:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.btn-danger {
+    background-color: #dc2626;
+    color: #fff;
+}
+
+.btn-danger:hover {
+    background-color: #b91c1c;
+}
+
+.input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #000;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+}
+
+.input:focus {
+    outline: none;
+    border-color: #666;
+}
+
+/* Home Page */
+.home-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+}
+
+.home-content {
+    max-width: 48rem;
+    text-align: center;
+}
+
+.profile-pic {
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    margin: 0 auto 2rem;
+    overflow: hidden;
+    box-shadow: 0 20px 25px -5px rgba(255, 255, 255, 0.1);
+}
+
+.profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.home-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.home-content p {
+    font-size: 1.5rem;
+    color: #d1d5db;
+    margin-bottom: 2rem;
+}
+
+/* Projects Page */
+.header {
+    border-bottom: 2px solid #fff;
+    padding: 2rem 0;
+    margin-bottom: 3rem;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    padding-bottom: 3rem;
+}
+
+.project-card {
+    background-color: #fff;
+    color: #000;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 15px -3px rgba(255, 255, 255, 0.1);
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 25px -5px rgba(255, 255, 255, 0.2);
+}
+
+.project-image {
+    width: 100%;
+    height: 12rem;
+    background-color: #e5e5e5;
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-info {
+    padding: 1.5rem;
+}
+
+.project-info h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-info p {
+    color: #4b5563;
+}
+
+/* Admin Login */
+.login-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.login-box {
+    background-color: #fff;
+    color: #000;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    max-width: 28rem;
+    width: 100%;
+    box-shadow: 0 20px 25px -5px rgba(255, 255, 255, 0.2);
+}
+
+.login-box h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.error-message {
+    background-color: #fee2e2;
+    border: 1px solid #ef4444;
+    color: #dc2626;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-link {
+    color: #666;
+    text-decoration: none;
+    font-size: 0.875rem;
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+.text-link:hover {
+    color: #000;
+}
+
+/* Admin Panel */
+.admin-container {
+    min-height: 100vh;
+    padding-bottom: 3rem;
+}
+
+.admin-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.form-card {
+    background-color: #fff;
+    color: #000;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.form-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+textarea.input {
+    resize: vertical;
+    min-height: 6rem;
+    font-family: inherit;
+}
+
+.project-list {
+    margin-top: 2rem;
+}
+
+.project-list h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.project-item {
+    background-color: #fff;
+    color: #000;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.project-thumbnail {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    background-color: #e5e5e5;
+    flex-shrink: 0;
+}
+
+.project-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-details {
+    flex: 1;
+}
+
+.project-details h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+}
+
+.project-details p {
+    color: #666;
+    font-size: 0.875rem;
+    margin-bottom: 0.25rem;
+}
+
+.project-details a {
+    color: #2563eb;
+    font-size: 0.875rem;
+    text-decoration: none;
+}
+
+.project-details a:hover {
+    text-decoration: underline;
+}
+
+.project-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.btn-small {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    min-width: 3rem;
+}
+
+.btn-disabled {
+    background-color: #d1d5db;
+    color: #9ca3af;
+    cursor: not-allowed;
+}
+
+.btn-disabled:hover {
+    background-color: #d1d5db;
+    transform: none;
+}
+
+.empty-state {
+    text-align: center;
+    color: #9ca3af;
+    font-size: 1.25rem;
+    padding: 3rem 0;
+}
+
+.loading {
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 3rem 0;
+}
+
+/* Settings Section */
+.settings-section {
+    background-color: #fff;
+    color: #000;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.settings-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.settings-preview {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: #f3f4f6;
+    border-radius: 0.5rem;
+}
+
+.settings-preview-pic {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    border: 2px solid #000;
+    overflow: hidden;
+}
+
+.settings-preview-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.settings-preview-text {
+    flex: 1;
+}
+
+.settings-preview-text strong {
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.settings-preview-text span {
+    color: #666;
+    font-size: 0.875rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .home-content h1 {
+        font-size: 2rem;
+    }
+
+    .home-content p {
+        font-size: 1.25rem;
+    }
+
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .admin-actions {
+        flex-direction: column;
+    }
+
+    .project-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .project-controls {
+        flex-direction: row;
+        width: 100%;
+    }
+}
